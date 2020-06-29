@@ -11,3 +11,5 @@ require (
 	github.com/stretchr/testify v1.2.2
 	golang.org/x/oauth2 v0.0.0-20181017192945-9dcd33a902f4
 )
+
+go 1.13

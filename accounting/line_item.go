@@ -12,7 +12,7 @@ type LineItem struct {
 	Quantity float64 `json:"Quantity,omitempty" xml:"Quantity,omitempty"`
 
 	// LineItem Unit Amount
-	UnitAmount float64 `json:"UnitAmount,omitempty" xml:"UnitAmount,omitempty"`
+	UnitAmount float64 `json:"UnitAmount" xml:"UnitAmount"`
 
 	// See Items
 	ItemCode string `json:"ItemCode,omitempty" xml:"ItemCode,omitempty"`
