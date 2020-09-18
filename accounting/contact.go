@@ -5,9 +5,10 @@ import (
 	"encoding/xml"
 	"time"
 
+	"github.com/markbates/goth"
+
 	"github.com/XeroAPI/xerogolang"
 	"github.com/XeroAPI/xerogolang/helpers"
-	"github.com/markbates/goth"
 )
 
 //Contact is a debtor/customer or creditor/supplier in a Xero Organisation
@@ -265,7 +266,7 @@ func (c *Contacts) AddToContactGroup(provider xerogolang.IProvider, session goth
 		return nil, err
 	}
 
-	contactResponseBytes, err := provider.Update(session, "ContactGroups/"+contactGroupID+"/Contacts", additionalHeaders, body)
+	contactResponseBytes, err := provider.Create(session, "ContactGroups/"+contactGroupID+"/Contacts", additionalHeaders, body)
 	if err != nil {
 		return nil, err
 	}
